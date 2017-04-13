@@ -13,8 +13,8 @@ ADD . /app
 
 RUN cp conf/sources.list /etc/apt/sources.list
 RUN apt-get update
-RUN apt-get install nginx -y --force-yes apt-transport-https
-RUN apt-get install supervisor -y  --force-yes apt-transport-https
+RUN apt-get install nginx -y
+RUN apt-get install supervisor -y
 
 # RUN cp ./conf/nginx.conf /etc/nginx/nginx.conf
 # RUN cp ./conf/supervisord.conf /etc/superisor/supervisorf.conf
