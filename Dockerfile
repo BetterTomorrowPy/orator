@@ -7,14 +7,14 @@ WORKDIR /app
 
 RUN mkdir -p /data/logs
 
-RUN apt-get install apt-transport-https -y
+# RUN apt-get install apt-transport-https -y
 
 ADD . /app
 
 RUN cp conf/sources.list /etc/apt/sources.list
 RUN apt-get update
-RUN apt-get install nginx -y
-RUN apt-get install supervisor -y
+RUN apt-get install nginx -y --force-yes apt-transport-https
+RUN apt-get install supervisor -y  --force-yes apt-transport-https
 
 # RUN cp ./conf/nginx.conf /etc/nginx/nginx.conf
 # RUN cp ./conf/supervisord.conf /etc/superisor/supervisorf.conf
