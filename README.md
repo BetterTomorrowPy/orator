@@ -1,3 +1,3 @@
 # orator
 common tools.
-docker nginx tornado pony add so no.
+ubuntu docker nginx tornado pony add so no.
