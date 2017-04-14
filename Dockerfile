@@ -15,14 +15,14 @@ ADD . /app
 RUN cp conf/sources.list /etc/apt/sources.list
 RUN pip install tornado
 RUN apt-get update
-RUN apt-get install nginx -y
+# RUN apt-get install nginx -y
 RUN apt-get install supervisor -y
 
-RUN cp ./conf/nginx.conf /etc/nginx/nginx.conf
+# RUN cp ./conf/nginx.conf /etc/nginx/nginx.conf
 RUN cp ./conf/supervisord.conf /etc/supervisor/supervisord.conf
 
 VOLUME ["/data"]
 
-EXPOSE 80 8000
+EXPOSE 8000 8000
 
 CMD ["/usr/bin/supervisord"]
