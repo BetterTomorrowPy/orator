@@ -6,7 +6,12 @@
 from tornado.gen import coroutine
 from tornado.web import RequestHandler
 
+from extensions.routing import route
 
+api_router = route(prefix='/api/1')
+
+
+@api_router.route(r'/index')
 class DemoHandler(RequestHandler):
     """"""
 
